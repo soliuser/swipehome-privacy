@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SwipeHome — Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f1a;
+      color: #e0e0f0;
+      line-height: 1.7;
+      padding: 40px 20px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 6px; color: #fff; }
+    .subtitle { color: #a0a0b8; font-size: 0.9rem; margin-bottom: 40px; }
+    h2 { font-size: 1.15rem; font-weight: 700; color: #fff; margin-top: 36px; margin-bottom: 10px; border-left: 3px solid #e94560; padding-left: 12px; }
+    p  { color: #c0c0d8; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { color: #c0c0d8; margin-bottom: 6px; }
+    a  { color: #e94560; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: #1e1e30;
+      border-radius: 12px;
+      border: 1px solid #2e2e45;
+      padding: 20px 24px;
+      margin-top: 40px;
+    }
+    .card p { margin: 0; font-size: 0.9rem; color: #a0a0b8; }
+  </style>
+</head>
+<body>
+
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">SwipeHome · Last updated: March 26, 2026</p>
+
+  <p>
+    SwipeHome ("the app", "we", "us") is a mobile application for browsing real estate listings.
+    This Privacy Policy explains what data we collect, how we use it, and how we protect it.
+  </p>
+
+  <h2>1. Data We Collect</h2>
+  <p>We collect the following categories of data:</p>
+  <ul>
+    <li><strong>Account data:</strong> your name, email address, and profile picture retrieved from your Google account upon sign-in.</li>
+    <li><strong>Property data (sellers only):</strong> title, description, price, location, and images you upload.</li>
+    <li><strong>Messages:</strong> text messages exchanged between buyers and sellers within the app.</li>
+    <li><strong>Device location (optional):</strong> GPS coordinates used solely to show distance to nearby listings in the current session. Location is never stored on our servers.</li>
+    <li><strong>Technical data:</strong> app version and device type (anonymized, for debugging purposes).</li>
+    <li><strong>Payment data:</strong> transaction records processed via Stripe. We do not store card numbers or sensitive payment details — these are handled entirely by Stripe.</li>
+  </ul>
+
+  <h2>2. Sign-in via Google</h2>
+  <p>
+    We use <strong>Google Sign-In</strong> for authentication. Upon sign-in, Google shares your public profile
+    information (name, email, profile picture) with us. Your Google password is never accessible to us.
+    Authentication and session management are handled by <strong>Supabase Auth</strong>.
+  </p>
+
+  <h2>3. Data Storage — Supabase</h2>
+  <p>
+    Your data is stored in a secure database provided by <strong>Supabase</strong> (PostgreSQL).
+    Each user can access only their own data, enforced by Row Level Security (RLS) policies.
+    Property images are stored in Supabase Storage.
+  </p>
+
+  <h2>4. Local Data (on your device)</h2>
+  <p>The app stores the following data locally on your device:</p>
+  <ul>
+    <li>Your list of saved (favorite) properties (AsyncStorage)</li>
+    <li>Active search filters (AsyncStorage)</li>
+    <li>Session token for automatic sign-in</li>
+  </ul>
+  <p>This data remains only on your device and is cleared when you sign out.</p>
+
+  <h2>5. Payments — Stripe</h2>
+  <p>
+    Payments are processed securely by <strong>Stripe</strong>. When you make a payment, your card details
+    are entered directly into Stripe's secure interface and never transmitted to our servers.
+    We store only transaction status and Stripe's payment intent ID for record-keeping.
+    For more information, see <a href="https://stripe.com/privacy" target="_blank">Stripe's Privacy Policy</a>.
+  </p>
+
+  <h2>6. How We Use Your Data</h2>
+  <ul>
+    <li>To display your profile and identify you in conversations</li>
+    <li>To allow you to publish and manage property listings (sellers)</li>
+    <li>To enable communication between buyers and sellers</li>
+    <li>To show distance to properties (processed locally, not sent to our servers)</li>
+    <li>To process payments for listing fees and premium subscriptions</li>
+  </ul>
+
+  <h2>7. Sharing Data with Third Parties</h2>
+  <p>
+    We do <strong>not sell, rent, or share</strong> your personal data with third parties for commercial purposes.
+    We use the following trusted services to operate the app:
+  </p>
+  <ul>
+    <li><strong>Supabase</strong> — database and authentication (<a href="https://supabase.com/privacy" target="_blank">privacy policy</a>)</li>
+    <li><strong>Google Sign-In</strong> — authentication (<a href="https://policies.google.com/privacy" target="_blank">privacy policy</a>)</li>
+    <li><strong>Stripe</strong> — payment processing (<a href="https://stripe.com/privacy" target="_blank">privacy policy</a>)</li>
+    <li><strong>Firebase</strong> — analytics and push notifications (<a href="https://firebase.google.com/support/privacy" target="_blank">privacy policy</a>)</li>
+  </ul>
+
+  <h2>8. Data Security</h2>
+  <p>
+    All data in transit is protected by TLS encryption (HTTPS).
+    Database access is regulated by RLS policies — each user can only read and write their own data.
+    Property images are publicly readable (intended for display), but writing or deleting requires authentication.
+  </p>
+
+  <h2>9. Your Rights</h2>
+  <p>You have the right to:</p>
+  <ul>
+    <li>Access the data we have stored about you</li>
+    <li>Request correction of inaccurate data</li>
+    <li>Request deletion of your account and all associated data</li>
+    <li>Revoke Google account access via Google Account Settings</li>
+  </ul>
+  <p>To delete your account, use the option in the app (Profile → Delete Account) or contact us at the email below.</p>
+
+  <h2>10. Children</h2>
+  <p>
+    This app is not intended for persons under the age of 16.
+    We do not knowingly collect data from children.
+  </p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>
+    We may update this policy from time to time. We will notify you of significant changes within the app.
+    The date of the last update is shown at the top of this page.
+  </p>
+
+  <h2>12. Contact</h2>
+  <p>
+    For privacy-related questions, contact us at:
+    <br /><a href="mailto:privacy@swipehome.app">privacy@swipehome.app</a>
+  </p>
+
+  <div class="card">
+    <p>© 2026 SwipeHome. All rights reserved. · <a href="terms-of-service.html">Terms of Service</a></p>
+  </div>
+
+</body>
+</html>
